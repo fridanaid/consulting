@@ -35,27 +35,21 @@ body{
   linear-gradient(to bottom,#f7f7f5,#ffffff);
 
   color:var(--text);
-
   overflow-x:hidden;
 }
 
 /* NAVBAR */
-
 .navbar{
   position:fixed;
   width:100%;
   top:0;
   z-index:1000;
-
   backdrop-filter:blur(20px);
   background:rgba(255,255,255,0.82);
-
   border-bottom:1px solid var(--border);
-
   display:flex;
   justify-content:space-between;
   align-items:center;
-
   padding:22px 8%;
 }
 
@@ -63,7 +57,6 @@ body{
   font-size:1.3rem;
   font-weight:800;
   letter-spacing:-1px;
-
   background:linear-gradient(to right,var(--primary),var(--secondary));
   -webkit-background-clip:text;
   -webkit-text-fill-color:transparent;
@@ -86,7 +79,6 @@ nav a:hover{
 }
 
 /* HERO */
-
 .hero{
   min-height:100vh;
   display:flex;
@@ -98,26 +90,11 @@ nav a:hover{
   max-width:760px;
 }
 
-.tag{
-  display:inline-flex;
-  align-items:center;
-  gap:10px;
-  padding:12px 20px;
-  border-radius:999px;
-  background:#eef2ff;
-  border:1px solid rgba(37,99,235,0.08);
-  color:var(--primary);
-  margin-bottom:30px;
-  font-size:0.95rem;
-  font-weight:600;
-}
-
 .hero h1{
   font-size:5rem;
   line-height:1;
   letter-spacing:-3px;
   margin-bottom:30px;
-  color:var(--text);
 }
 
 .hero p{
@@ -128,51 +105,12 @@ nav a:hover{
   max-width:700px;
 }
 
-.hero-buttons{
-  display:flex;
-  gap:20px;
-}
-
-/* BUTTONS */
-
-.btn-primary{
-  background:linear-gradient(to right,var(--primary),var(--secondary));
-  color:white;
-  padding:16px 30px;
-  border-radius:16px;
-  text-decoration:none;
-  font-weight:700;
-  transition:0.3s;
-  box-shadow:0 10px 30px rgba(37,99,235,0.15);
-}
-
-.btn-primary:hover{
-  transform:translateY(-4px);
-  box-shadow:0 20px 40px rgba(37,99,235,0.18);
-}
-
-.btn-secondary{
-  border:1px solid rgba(0,0,0,0.08);
-  color:var(--text);
-  background:white;
-  padding:16px 30px;
-  border-radius:16px;
-  text-decoration:none;
-  transition:0.3s;
-}
-
-.btn-secondary:hover{
-  background:#f3f4f6;
-}
-
 /* SECTIONS */
-
 section{
   padding:120px 8%;
 }
 
-/* CARDS */
-
+/* CARDS (FIX RESTAURADO) */
 .cards{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
@@ -181,25 +119,31 @@ section{
 
 .card{
   background:var(--card);
-  border:1px solid rgba(0,0,0,0.06);
+  border:1px solid var(--border);
   border-radius:28px;
   overflow:hidden;
-  transition:0.4s;
   box-shadow:var(--shadow);
+  transition:0.3s ease;
 }
 
 .card:hover{
-  transform:translateY(-10px);
-  box-shadow:0 20px 40px rgba(0,0,0,0.08);
+  transform:translateY(-8px);
+  box-shadow:0 20px 40px rgba(0,0,0,0.10);
+}
+
+.card img{
+  width:100%;
+  height:240px;
+  object-fit:cover;
 }
 
 .card-content{
-  padding:40px;
+  padding:30px;
 }
 
 .card h3{
-  font-size:1.8rem;
-  margin-bottom:18px;
+  font-size:1.5rem;
+  margin-bottom:16px;
   color:var(--text);
 }
 
@@ -208,17 +152,12 @@ section{
   line-height:1.8;
 }
 
-/* ===== ABOUT SECTION (CON FOTO) ===== */
-
-.about-section{
-  padding-top:180px;
-}
-
+/* ABOUT SECTION (SOLO AJUSTE SIN ROMPER CARD) */
 .about-card{
   display:flex;
+  gap:50px;
   align-items:center;
-  gap:60px;
-  padding:50px;
+  padding:40px;
 }
 
 .about-image{
@@ -228,17 +167,12 @@ section{
 }
 
 .about-image img{
-  width:340px;
-  height:340px;
+  width:300px;
+  height:300px;
   object-fit:cover;
   border-radius:50%;
-  border:6px solid white;
-  box-shadow:0 25px 60px rgba(0,0,0,0.18);
-  transition:0.4s ease;
-}
-
-.about-image img:hover{
-  transform:scale(1.03);
+  border:5px solid #fff;
+  box-shadow:0 20px 50px rgba(0,0,0,0.15);
 }
 
 .about-card .card-content{
@@ -246,19 +180,13 @@ section{
   padding:0;
 }
 
-.about-card .card-content h3{
-  font-size:2rem;
-  margin-bottom:20px;
-}
-
 .about-card .card-content p{
-  margin-bottom:15px;
-  line-height:1.9;
+  margin-bottom:14px;
   color:var(--muted);
+  line-height:1.8;
 }
 
 /* PAGE HEADER */
-
 .page-header{
   padding-top:180px;
   padding-bottom:60px;
@@ -276,17 +204,15 @@ section{
 }
 
 /* FOOTER */
-
 footer{
   padding:60px 8%;
-  border-top:1px solid rgba(0,0,0,0.06);
-  color:var(--muted);
+  border-top:1px solid var(--border);
   text-align:center;
+  color:var(--muted);
   background:white;
 }
 
 /* RESPONSIVE */
-
 @media(max-width:900px){
 
   nav{
@@ -294,21 +220,16 @@ footer{
   }
 
   .hero h1{
-    font-size:3.2rem;
+    font-size:3rem;
   }
 
   .about-card{
     flex-direction:column;
     text-align:center;
-    padding:35px;
   }
 
   .about-image img{
-    width:240px;
-    height:240px;
-  }
-
-  .page-header h1{
-    font-size:2.8rem;
+    width:220px;
+    height:220px;
   }
 }
