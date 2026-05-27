@@ -1,6 +1,6 @@
-# GeoImpact Studio
+# Frida Archibold
 
-Sitio web profesional para consultoría ambiental y territorial.
+Sitio web profesional para consultoría en gestión territorial.
 
 ## Servicios
 
