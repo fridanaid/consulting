@@ -35,21 +35,28 @@ body{
   linear-gradient(to bottom,#f7f7f5,#ffffff);
 
   color:var(--text);
+
   overflow-x:hidden;
 }
 
 /* NAVBAR */
+
 .navbar{
   position:fixed;
   width:100%;
   top:0;
   z-index:1000;
+
   backdrop-filter:blur(20px);
+
   background:rgba(255,255,255,0.82);
+
   border-bottom:1px solid var(--border);
+
   display:flex;
   justify-content:space-between;
   align-items:center;
+
   padding:22px 8%;
 }
 
@@ -57,7 +64,12 @@ body{
   font-size:1.3rem;
   font-weight:800;
   letter-spacing:-1px;
-  background:linear-gradient(to right,var(--primary),var(--secondary));
+
+  background:linear-gradient(
+  to right,
+  var(--primary),
+  var(--secondary));
+
   -webkit-background-clip:text;
   -webkit-text-fill-color:transparent;
 }
@@ -79,10 +91,13 @@ nav a:hover{
 }
 
 /* HERO */
+
 .hero{
   min-height:100vh;
+
   display:flex;
   align-items:center;
+
   padding:140px 8% 100px;
 }
 
@@ -94,23 +109,31 @@ nav a:hover{
   font-size:5rem;
   line-height:1;
   letter-spacing:-3px;
+
   margin-bottom:30px;
+
+  color:var(--text);
 }
 
 .hero p{
   font-size:1.2rem;
   line-height:1.9;
+
   color:var(--muted);
+
   margin-bottom:40px;
+
   max-width:700px;
 }
 
 /* SECTIONS */
+
 section{
   padding:120px 8%;
 }
 
-/* CARDS (FIX RESTAURADO) */
+/* CARDS */
+
 .cards{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
@@ -118,17 +141,27 @@ section{
 }
 
 .card{
+  position:relative;
+
   background:var(--card);
-  border:1px solid var(--border);
+
+  border:1px solid rgba(0,0,0,0.06);
+
   border-radius:28px;
+
   overflow:hidden;
+
+  transition:0.4s;
+
   box-shadow:var(--shadow);
-  transition:0.3s ease;
 }
 
 .card:hover{
-  transform:translateY(-8px);
-  box-shadow:0 20px 40px rgba(0,0,0,0.10);
+  transform:translateY(-10px);
+
+  border-color:rgba(37,99,235,0.15);
+
+  box-shadow:0 20px 40px rgba(0,0,0,0.08);
 }
 
 .card img{
@@ -144,6 +177,7 @@ section{
 .card h3{
   font-size:1.5rem;
   margin-bottom:16px;
+
   color:var(--text);
 }
 
@@ -152,11 +186,12 @@ section{
   line-height:1.8;
 }
 
-/* ABOUT SECTION (SOLO AJUSTE SIN ROMPER CARD) */
+/* ABOUT */
+
 .about-card{
   display:flex;
-  gap:50px;
   align-items:center;
+  gap:50px;
   padding:40px;
 }
 
@@ -180,13 +215,8 @@ section{
   padding:0;
 }
 
-.about-card .card-content p{
-  margin-bottom:14px;
-  color:var(--muted);
-  line-height:1.8;
-}
-
 /* PAGE HEADER */
+
 .page-header{
   padding-top:180px;
   padding-bottom:60px;
@@ -194,7 +224,9 @@ section{
 
 .page-header h1{
   font-size:4rem;
+  letter-spacing:-2px;
   margin-bottom:20px;
+  color:var(--text);
 }
 
 .page-header p{
@@ -204,15 +236,17 @@ section{
 }
 
 /* FOOTER */
+
 footer{
   padding:60px 8%;
-  border-top:1px solid var(--border);
-  text-align:center;
+  border-top:1px solid rgba(0,0,0,0.06);
   color:var(--muted);
+  text-align:center;
   background:white;
 }
 
 /* RESPONSIVE */
+
 @media(max-width:900px){
 
   nav{
@@ -220,7 +254,7 @@ footer{
   }
 
   .hero h1{
-    font-size:3rem;
+    font-size:3.3rem;
   }
 
   .about-card{
@@ -231,5 +265,9 @@ footer{
   .about-image img{
     width:220px;
     height:220px;
+  }
+
+  .page-header h1{
+    font-size:2.8rem;
   }
 }
